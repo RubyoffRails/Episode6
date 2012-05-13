@@ -1,8 +1,12 @@
 require_relative 'test_helper'
 
-describe "Automobile class" do
-  it "should exist" do
+describe 'Automobile class' do
+  it 'should exist' do
     Automobile.must_be_kind_of Class
+  end
+
+  it 'should inherit from Vehicle' do
+    Automobile.superclass.must_equal Vehicle
   end
 
   it 'should have a class method that returns the number of wheels' do
@@ -53,5 +57,19 @@ describe "Automobile class" do
 
     car.color = 'white'
     car.color.must_equal 'white'
+  end
+
+  it 'should be able to compare two cars' do
+    chevy = Automobile.new({
+      :color => 'red',
+      :make => 'chevy',
+      :model => 'impala',
+      :year => 1972
+    })
+    ford = Automobile.new
+    chevy_copy = chevy.dup
+
+    chevy.wont_equal ford
+    chevy.must_equal chevy_copy
   end
 end

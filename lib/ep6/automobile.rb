@@ -1,10 +1,6 @@
-class Automobile
+class Automobile < Vehicle
   attr_accessor :color
   attr_reader :make, :model, :year
-
-  def self.wheels
-    4
-  end
 
   def initialize(features = {})
     defaults = {
@@ -19,5 +15,14 @@ class Automobile
     @make = features[:make]
     @model = features[:model]
     @year = features[:year]
+  end
+
+  def ==(other)
+    if @color == other.color && @make == other.make &&
+      @model == other.model && @year == other.year
+      return true
+    else
+      return false
+    end
   end
 end
