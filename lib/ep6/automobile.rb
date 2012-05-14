@@ -15,6 +15,10 @@ class Automobile < Vehicle
     @make = features[:make]
     @model = features[:model]
     @year = features[:year]
+
+    # Now add the new instance to the @all_vehicles array via Vehicle's
+    # initialize method.
+    super()
   end
 
   def ==(other)
