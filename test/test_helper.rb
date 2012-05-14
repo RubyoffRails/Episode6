@@ -1,0 +1,5 @@
+gem 'minitest'
+require 'minitest/spec'
+require 'fivemat/minitest/autorun'
+require 'redgreen'
+require_relative '../lib/ep6'
