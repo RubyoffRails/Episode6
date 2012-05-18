@@ -1,6 +1,8 @@
-require_relative 'vehicle.rb'
+require_relative 'vehicle'
 
 class Automobile < Vehicle
+
+  @@vehicles = [] 
 
   attr_accessor :color, :make, :year
   
@@ -13,8 +15,12 @@ class Automobile < Vehicle
     @color = color
     @make = make
     @year = year
+    add_to_vehicles
   end
-
+  
+  def add_to_vehicles
+    @@vehicles << self
+  end
 
   def update(args)
     self.color = args[:color]
@@ -36,5 +42,5 @@ class Automobile < Vehicle
    attributes << self.year
    attributes
   end
-
+  
 end
