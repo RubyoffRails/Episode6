@@ -12,8 +12,16 @@ describe Automobile do
                             make: "GMC", 
                             model: "Sierra", 
                             year: 2000 })
-    subject.==(car2).should be_true
-  end                        
+    subject.should eq(car2)
+  end        
+  
+  it "should not equal car2 if all the attributes are not identical" do
+    car2 = Automobile.new({color: "green", 
+                            make: "GMC", 
+                            model: "Sierra", 
+                            year: 2000 })
+    subject.should_not eq(car2)
+  end                             
 
   
 	it "should have four wheels" do

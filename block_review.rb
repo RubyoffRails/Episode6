@@ -21,7 +21,7 @@ das_auto.color = "black"
 puts "das_auto updated color: #{das_auto.color}"
 
 
-auto_hash = { color: "red", 
+auto_hash = { color: "black", 
               make: "Ford", 
               model: "F-150", 
               year: 2011 }
@@ -39,6 +39,7 @@ puts "Motorcycle Wheels: #{Motorcycle.wheels}"
 
 puts "Is it true that the two objects have exactly the same attributes? #{das_auto == zwei_auto ? "Yes" : "No"}"
 
-
 # Eagle
+
+
 
