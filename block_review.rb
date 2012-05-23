@@ -37,7 +37,7 @@ puts "Vehicle Wheels: #{Vehicle.wheels}"
 puts "Automobile Wheels: #{Automobile.wheels}"
 puts "Motorcycle Wheels: #{Motorcycle.wheels}"
 
-puts "Is it true that the two objects have exactly the same attributes? #{das_auto.pudding(zwei_auto) ? "Yes" : "No"}"
+puts "Is it true that the two objects have exactly the same attributes? #{das_auto = zwei_auto ? "Yes" : "No"}"
 
 
 # Eagle

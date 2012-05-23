@@ -19,5 +19,4 @@ doc/
 *.swp
 *.swo
 
-config/database.yml
 TODO
