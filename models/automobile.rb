@@ -9,6 +9,7 @@ class Automobile < Vehicle
     @make  = hash[:make]
     @model = hash[:model]
     @year  = hash[:year] 
+    Vehicle.add(hash)
   end
   
   def self.wheels
@@ -17,7 +18,7 @@ class Automobile < Vehicle
 
   def ==(other)     
     ATTRIBUTES.all? do |attr| 
-      other.send(attr) == self.send(attr)   
+    other.send(attr) == self.send(attr)   
     end 
   end
       

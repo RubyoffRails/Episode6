@@ -31,7 +31,7 @@ puts zwei_auto.inspect
 puts "zwei_auto is a #{zwei_auto.color} #{zwei_auto.make} #{zwei_auto.model} #{zwei_auto.year}"
 
 
-# Tiger (uppercut)
+# Tiger
 
 puts "Vehicle Wheels: #{Vehicle.wheels}"
 puts "Automobile Wheels: #{Automobile.wheels}"
@@ -41,5 +41,21 @@ puts "Is it true that the two objects have exactly the same attributes? #{das_au
 
 # Eagle
 
+moto =  { color: "orange", 
+          make: "KTM", 
+          model: "SX", 
+          year: 2012 }
+           
+Motorcycle.new(moto)
+                    
+honda = { color: "blue", 
+          make: "Honda", 
+          model: "Accord", 
+          year: 2007 }
 
+Automobile.new(honda)          
+          
+puts "Motorcycle: #{Motorcycle.vehicles}\n\n"
+puts "Automobile: #{Automobile.vehicles}\n\n"
 
+puts "Only blue hondas: #{Vehicle.find_blue_hondas}"
