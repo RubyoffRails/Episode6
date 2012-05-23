@@ -8,6 +8,7 @@ class Automobile < Vehicle
     @make  = hash[:make]
     @model = hash[:model]
     @year  = hash[:year] 
+    Vehicle.add(hash)
   end
   
   def self.wheels
@@ -18,7 +19,6 @@ class Automobile < Vehicle
   def ==(other) 
     result = true
     [[other.color, self.color], [other.make, self.make], [other.model, self.model], [other.year, self.year]].each do |other, this|
-        puts "other: #{other} this: #{this}"
         result = false unless other == this
     end 
     return result       
