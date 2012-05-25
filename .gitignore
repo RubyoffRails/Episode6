@@ -20,3 +20,4 @@ doc/
 *.swo
 
 TODO
+config/database.yml
