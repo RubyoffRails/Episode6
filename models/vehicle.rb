@@ -9,8 +9,6 @@ class Vehicle
     @@vehicles
   end
 
-  @@pudding
-  
   def self.wheels
     37
   end
