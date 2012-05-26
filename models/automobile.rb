@@ -1,4 +1,6 @@
-class Automobile
+require_relative "../models/vehicle"
+
+class Automobile < Vehicle
   
   attr_accessor :color, :make, :model, :year
   
@@ -11,9 +13,4 @@ class Automobile
   
   end
   
-  def self.wheels
-    4
-  end
-
-
 end

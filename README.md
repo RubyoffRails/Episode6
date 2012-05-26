@@ -43,7 +43,7 @@ Tiger Assignment
 Eagle Assignment
 ----------------
 
-1. Create a class variable (@@) in the Vehicle that tracks all vehicles mde
+1. Create a class variable (@@) in the Vehicle that tracks all vehicles made
 2. Create a class method that let's you filter the vehicles to only blue honda accords (using our enuerable filters)
 3. Do it all using TDD (of course!)
 
