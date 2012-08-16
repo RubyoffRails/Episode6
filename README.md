@@ -38,7 +38,6 @@ Tiger Assignment
 1. Create a Vehicle class that automobile inherits from
 2. Create a Motorcycle class that inherits from vehicle
 3. Show the motorcycle class overriding the vehicle's class method for number of tires
-4. Implement the `==(other)` method to test if the car's color/make/model/year match
 
 Eagle Assignment
 ----------------
