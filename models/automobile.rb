@@ -8,5 +8,10 @@ class Automobile < Vehicle
     @make = options[:make]
     @model = options[:model]
     @year = options[:year]
+    add_to_vehicles
+  end
+
+  def add_to_vehicles
+    @@vehicles << self
   end
 end
