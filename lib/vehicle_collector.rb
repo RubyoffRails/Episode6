@@ -2,7 +2,7 @@ module VehicleCollector
 
   @@vehicles = []
 
-  def self.show_vehicles
+  def self.show_vehicle_names
     @@vehicles.map { |vehicle| vehicle.name }
   end
 

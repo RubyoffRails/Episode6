@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe VehicleCollector, '.show_vehicles' do
+describe VehicleCollector, '.show_vehicle_names' do
   it 'outputs all collected vehicles' do
     VehicleCollector.reset
     motorcycle = Motorcycle.new(name: 'Harley Davidson')
     another_motorcycle = Motorcycle.new(name: 'Honda')
 
-    expect(VehicleCollector.show_vehicles).to eq ['Harley Davidson', 'Honda']
+    expect(VehicleCollector.show_vehicle_names).to eq ['Harley Davidson', 'Honda']
   end
 end
 
