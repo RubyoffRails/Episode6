@@ -1,4 +1,10 @@
+require './lib/vehicle_collector'
 class Vehicle
+  include VehicleCollector
+
+  def initialize(vehicle)
+    VehicleCollector.add_vehicles(vehicle)
+  end
 
   def self.blue_honda_accords
     automobiles = @@vehicles.select { |vehicle| vehicle.class == Automobile }

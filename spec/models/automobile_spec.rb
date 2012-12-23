@@ -9,16 +9,7 @@ describe Automobile, '.initialize' do
     expect(car.make).to eq 'BMW'
     expect(car.model).to eq '325i'
     expect(car.year).to eq 1995
-    expect(car.collector).to be_instance_of VehicleCollector
-  end
-end
-
-describe Automobile, '.initialize' do
-  it 'has a vehicle collector when instantiated' do
-    @@vehicles = []
-    car = Automobile.new(color: 'blue', make: 'BMW', model: '325i', year: 1995)
-
-    expect(@@vehicles).to eq [car]
+    expect(car.type).to be_instance_of Vehicle
   end
 end
 

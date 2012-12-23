@@ -1,13 +1,12 @@
 require 'spec_helper'
 
 describe Motorcycle, '.initialize' do
-  it 'has a name and vehicle collector when instantiated' do
+  it 'has a name and type when instantiated' do
     @@vehicles = []
     motorcycle = Motorcycle.new(name: 'Harley Davidson')
 
-    expect(motorcycle.collector).to be_instance_of VehicleCollector
+    expect(motorcycle.type).to be_instance_of Vehicle
     expect(motorcycle.name).to eq 'Harley Davidson'
-    expect(@@vehicles).to eq [motorcycle]
   end
 end
 
