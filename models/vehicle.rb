@@ -1,11 +1,5 @@
 class Vehicle
 
-  @@vehicles = []
-
-  def self.wheels
-    4 # Hardcoded value since there were no further intructions regarding what an automobile is. 
-  end
-
   def self.blue_honda_accords
     automobiles = @@vehicles.select { |vehicle| vehicle.class == Automobile }
     automobiles.keep_if do |automobile| 
@@ -15,7 +9,7 @@ class Vehicle
     end
   end
 
-  def add_vehicles(vehicle)
-    @@vehicles << vehicle
+  def self.wheels
+    4
   end
 end
