@@ -5,12 +5,3 @@ describe Motorcycle, '.wheels' do
     expect(Motorcycle.wheels).to eq 2
   end
 end
-
-describe Motorcycle, '#add_to_vehicles' do
-  it 'adds itself to @@vehicles array' do
-    @@vehicles = []
-    motorcycle = Motorcycle.new
-
-    expect(@@vehicles.count).to eq 1
-  end
-end

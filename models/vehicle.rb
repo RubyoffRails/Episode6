@@ -15,4 +15,7 @@ class Vehicle
     end
   end
 
+  def add_vehicles(vehicle)
+    @@vehicles << vehicle
+  end
 end

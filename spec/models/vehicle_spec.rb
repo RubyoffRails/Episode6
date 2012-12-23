@@ -20,3 +20,13 @@ describe Vehicle, '#blue_honda_accords' do
     expect(blue_hondas).to eq [car]
   end
 end
+
+describe Vehicle, '#add_vehicles' do
+  it 'adds new instances of subclasses to @@vehicles when created' do
+    @@vehicles = []
+    car = Automobile.new(color: 'blue', make: 'BMW', model: '325i', year: 1995)
+    motorcycle = Motorcycle.new
+
+    expect(@@vehicles.count).to eq 2
+  end
+end

@@ -16,12 +16,3 @@ describe Automobile, '.initialize' do
     expect(car.year).to eq 1995
   end
 end
-
-describe Automobile, '#add_to_vehicles' do
-  it 'adds itself to @@vehicles array' do
-    @@vehicles = []
-    car = Automobile.new(color: 'blue', make: 'BMW', model: '325i', year: 1995)
-
-    expect(@@vehicles.count).to eq 1
-  end
-end
