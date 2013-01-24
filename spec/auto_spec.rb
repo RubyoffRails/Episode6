@@ -2,7 +2,7 @@ require_relative '../models/auto'
 
 describe Auto do
   before(:each) do
-    @auto = Auto.new(:color => 'purple', :make => 'VW', :model => 'GTI', :year => 2011)
+    @auto = Auto.new
   end
 
   it "should return number of wheels" do
