@@ -1,4 +1,6 @@
-class Automobile
+require_relative "Vehicle"
+
+class Automobile < Vehicle
 
 	def self.number_of_wheels
 		@wheels = 4
@@ -33,6 +35,10 @@ class Automobile
 
 	def year
 		@year
+	end
+
+	def to_s
+		"#{year} #{color} #{make} #{model}"
 	end
 
 end
