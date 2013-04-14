@@ -12,10 +12,10 @@ describe Vehicle do
 	end
 
 	it "class should keep track of the vehicles made" do
-		Vehicle.Vehicles.should_not be(nil)
-		Vehicle.Vehicles.count.should eq(0)
+		Vehicle.vehicles.should_not be(nil)
+		Vehicle.vehicles.count.should eq(0)
 		veh = Vehicle.new(color: "white", make: "Honda", model: "Accord", year: "2002")
-		Vehicle.Vehicles.count.should eq(1)
+		Vehicle.vehicles.count.should eq(1)
 	end
 
 
@@ -47,6 +47,6 @@ describe Vehicle do
 	it "should allow the class to be reset" do
 		auto = Vehicle.new(color: "silver", make: "Toyota", model: "Camry", year: "2012")
 		Vehicle.reset
-		Vehicle.Vehicles.count.should eq(0)
+		Vehicle.vehicles.count.should eq(0)
 	end
 end

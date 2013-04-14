@@ -15,7 +15,7 @@ puts "Auto 1: #{auto1.to_s}"
 puts "Auto 2: #{auto2.to_s}"
 puts "Auto 3: #{auto3.to_s}"
 puts
-puts "All vehicles: #{Vehicle.Vehicles.inspect}"
+puts "All vehicles: #{Vehicle.vehicles.inspect}"
 puts "All blue Honda Accords: #{Vehicle.get_favorite_combo}"
 puts
 puts "Serenity now!"
