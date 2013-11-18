@@ -1,6 +1,0 @@
-host: 'localhost'
-adapter: 'postgresql'
-database: 'episode5'
-username:  XXXXXXX
-encoding: 'utf8'
-pool: 5
