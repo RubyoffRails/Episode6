@@ -1,0 +1,9 @@
+
+require_relative "spec_helper"
+
+describe Motor do 
+  it "should have four wheels" do
+    Motor.wheels.should eq(2)
+  end
+  
+end
