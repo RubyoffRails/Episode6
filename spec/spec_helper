@@ -1,0 +1,6 @@
+require "rspec"
+require 'bundler/setup'
+require_relative '../db/setup'
+require_relative "../models/vehicle"
+require_relative "../models/auto"
+require_relative "../models/motor"
