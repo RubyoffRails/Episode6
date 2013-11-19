@@ -3,7 +3,7 @@ require_relative "spec_helper"
 describe Vehicle do
 
   it "should start with no wheels" do 
-    Vehicle.wheels.should eq(nil)
+    Vehicle.wheels.should be_nil
   end
 
   it "should take input to describe the automobile" do 
