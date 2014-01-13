@@ -8,8 +8,9 @@ class Vehicle
     @color = args.fetch(:color) if args[:color]
     @make = args.fetch(:make) if args[:make]
     @model = args.fetch(:model) if args[:model]
-    @year = args.fetch(:year) if args[:year]
+    @year = args.fetch(:year).to_s if args[:year]
     @name = args.fetch(:name) if args[:name]
+    args[:year] = @year.to_s
     @@all_vehicles << args
   end
 
@@ -39,7 +40,7 @@ class Vehicle
     @color = args.fetch(:color) if args[:color]
     @make = args.fetch(:make) if args[:make]
     @model = args.fetch(:model) if args[:model]
-    @year = args.fetch(:year) if args[:year]
+    @year = args.fetch(:year).to_s if args[:year]
     update_all_vehicles(name)
   end
 end

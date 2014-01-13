@@ -11,7 +11,7 @@ describe Automobile do
     expect(car.color).to eq('blue')
     expect(car.make).to eq('Toyota')
     expect(car.model).to eq('Prius')
-    expect(car.year).to eq(2008)
+    expect(car.year).to eq('2008')
   end
 
   it "should allow you to change attributes" do

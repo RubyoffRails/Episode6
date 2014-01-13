@@ -5,7 +5,7 @@ describe Vehicle do
   it "should add to @all_vehicles" do
     Automobile.new(name: 'new', color: 'purple', make: 'Toyota', model: 'Prius', year: 2008) 
     index = Automobile.all_vehicles.index {|vehicle| vehicle[:name] == 'new' }
-    expect(Automobile.all_vehicles[index]).to eq({name: 'new', :color => 'purple', :make => 'Toyota', :model => 'Prius', :year => 2008})
+    expect(Automobile.all_vehicles[index]).to eq({name: 'new', :color => 'purple', :make => 'Toyota', :model => 'Prius', :year => "2008"})
   end
 
   describe "#filter" do
@@ -14,7 +14,7 @@ describe Vehicle do
       Automobile.new(name: 'new4', color: 'white', make: 'Honda', model: 'Accord', year: 2008) 
       Automobile.new(name: 'new5', color: 'blue', make: 'Honda', model: 'Accord', year: 2008) 
       Automobile.new(name: 'new6', color: 'purple', make: 'Toyota', model: 'Prius', year: 2008) 
-      expect(Automobile.filter(color: 'blue', make: 'Honda', model: 'Accord')).to eq([{name: 'new3', color: 'blue', make: 'Honda', model: 'Accord', year: 2008}, {name: 'new5', color: 'blue', make: 'Honda', model: 'Accord', year: 2008}])
+      expect(Automobile.filter(color: 'blue', make: 'Honda', model: 'Accord')).to eq([{name: 'new3', color: 'blue', make: 'Honda', model: 'Accord', year: "2008"}, {name: 'new5', color: 'blue', make: 'Honda', model: 'Accord', year: "2008"}])
     end
   end
 
@@ -24,7 +24,7 @@ describe Vehicle do
       car = Automobile.new(name: 'new2', color: 'purple', make: 'Toyota', model: 'Prius', year: 2008) 
       car.update('new2', year: 2009)
       index = car.all_vehicles.index {|vehicle| vehicle[:name] == 'new2' }
-      expect(car.all_vehicles[index][:year]).to eq(2009)
+      expect(car.all_vehicles[index][:year]).to eq('2009')
     end
   end
 
