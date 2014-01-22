@@ -12,9 +12,7 @@ class Vehicle
 
 	def self.filter
 		@@allvehicles.select do |i|
-			i.color == "Blue"
-			i.make == "Honda"
-			i.model == "Accord"
+			i.color == "Blue" && i.make == "Honda" && i.model == "Accord"
 		end
 	end
 
