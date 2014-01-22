@@ -1,5 +1,7 @@
-class Automobile
+class Automobile < Vehicle
+	
 	attr_accessor :color, :make, :model, :year
+
 	def initialize(color, make, model, year)
 		@color = color
 		@make = make
@@ -7,7 +9,4 @@ class Automobile
 		@year = year
 	end
 
-	def wheels
-		4
-	end
 end
