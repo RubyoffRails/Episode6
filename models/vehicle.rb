@@ -1,7 +1,5 @@
 class Vehicle
 
-	@@allvehicles = []
-
 	def initialize
 		@@allvehicles << self
 	end
