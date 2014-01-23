@@ -2,6 +2,10 @@ class Vehicle
 
 	@@allvehicles = []
 
+	def initialize
+		@@allvehicles << self
+	end
+
 	def self.tires
 		4
 	end
