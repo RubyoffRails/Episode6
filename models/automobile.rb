@@ -1,4 +1,6 @@
-class Automobile
+require_relative 'Vehicle'
+
+class Automobile < Vehicle
 	
 	attr_reader :color, :make, :model, :year
 
@@ -7,10 +9,6 @@ class Automobile
 		@make = make
 		@model = model
 		@year = year
-	end
-
-	def self.number_of_wheels
-		4
 	end
 
 	def update(args)
