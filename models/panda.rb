@@ -6,8 +6,8 @@ class Automobile
 
   def initialize(args)
     @color = args[:color]
-    @make = args[:color]
-    @model = args[:color]
-    @year = args[:color]
+    @make = args[:make]
+    @model = args[:model]
+    @year = args[:year]
   end
 end
