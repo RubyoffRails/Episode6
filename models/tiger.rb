@@ -19,10 +19,10 @@ class Automobile < Vehicle
   end
 
   def update(new_args)
-    @color = new_args[:color]
-    @make = new_args[:make]
-    @model = new_args[:model]
-    @year = new_args[:year]
+    @color ||= new_args[:color]
+    @make ||= new_args[:make]
+    @model ||= new_args[:model]
+    @year ||= new_args[:year]
   end
 end
 
@@ -36,4 +36,5 @@ p auto
 auto.update(color: 'Blue', year: 2012)
 puts auto.color
 puts auto.year
+puts auto.model
 
