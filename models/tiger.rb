@@ -19,10 +19,10 @@ class Automobile < Vehicle
   end
 
   def update(new_args)
-    @color ||= new_args[:color]
-    @make ||= new_args[:make]
-    @model ||= new_args[:model]
-    @year ||= new_args[:year]
+    @color = new_args[:color] if new_args[:color]
+    @make ||= new_args[:make] if new_args[:make]
+    @model ||= new_args[:model] if new_args[:model]
+    @year ||= new_args[:year] if new_args[:year]
   end
 end
 
