@@ -1,12 +1,13 @@
 class Vehicle
-  def tires
+  def self.wheels
+    2
   end
 end
 
 class Automobile < Vehicle
 
   attr_accessor :color, :make, :model, :year
-  def self.wheels?
+  def self.wheels
     4
   end
 
@@ -19,7 +20,6 @@ class Automobile < Vehicle
 end
 
 class Motorcycle < Vehicle
-  def tires
-    return 2
-  end
 end
+
+puts Motorcycle.wheels

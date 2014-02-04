@@ -1,6 +1,6 @@
 class Automobile
   attr_accessor :color, :make, :model, :year
-  def self.wheels?
+  def self.wheels
     4
   end
 
@@ -11,3 +11,5 @@ class Automobile
     @year = args[:year]
   end
 end
+
+puts Automobile.wheels
