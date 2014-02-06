@@ -29,6 +29,7 @@ class Automobile < Vehicle
     @make = args[:make]
     @model = args[:model]
     @year = args[:year]
+    super()
   end
 
   def update(new_args)
@@ -42,7 +43,6 @@ end
 class Motorcycle < Vehicle
 end
 
-#v = Vehicle.new
 
 8.times { Vehicle.new }
 auto = Automobile.new(color: 'Red', make: 'Ford', model: 'Mustang', year: 2007)
