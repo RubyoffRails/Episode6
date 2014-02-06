@@ -1,24 +1,17 @@
 class Vehicle
 
-  @@count = 0
   @@vehicles = []
-  #attr_reader :vehicles
   def initialize
-    @@count += 1
-    @vehicles = []
+
   end
 
   def self.count
-    @@count
-  end
-
-   def self.count=(value)
-    @@count = value
+    @@vehicles.count
   end
 
   def self.search(args)
 
-    results = vehicles
+    results = @@vehicles
     args.each do |key, value|
       results.select!{|vehicle| vehicle.send(key) == value.to_sym}
     end
@@ -27,7 +20,7 @@ class Vehicle
   end
 
   def self.register(automobile)
-    vehicles << automobile
+    @@vehicles << automobile
   end
 
   def self.wheels
@@ -63,9 +56,6 @@ end
 class Motorcycle < Vehicle
 end
 
-
-8.times { Vehicle.new }
-4.times { Motorcycle.new }
 auto = Automobile.new(model: 'Mustang', color: 'Red', make: 'Ford', year: 2007)
 Automobile.new model: :mazda, color: :red, make: 'Civic', year: 2012
 Automobile.new model: :toyota, color: :red, make: 'Corolla', year: 2010
@@ -73,4 +63,4 @@ Automobile.new model: :honda, color: :blue, make: 'Civic', year: 2013
 Automobile.new model: :mazda, color: :blue, make: 'Accord', year: 2003
 
 puts Vehicle.count
-puts Vehicle.search(colour: "blue", model: "honda").inspect
+puts Vehicle.search(color: "blue", model: "honda").inspect
