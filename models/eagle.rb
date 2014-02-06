@@ -30,7 +30,7 @@ end
 
 
 class Automobile < Vehicle
-
+  @@automobiles = []
   attr_accessor :color, :make, :model, :year
   def self.wheels
     4
@@ -51,6 +51,13 @@ class Automobile < Vehicle
     @model = new_args[:model] if new_args[:model]
     @year = new_args[:year] if new_args[:year]
   end
+
+  def self.build_car(args)
+    auto = Automobile.new(args)
+    @@vehicles << auto
+    auto
+  end
+
 end
 
 class Motorcycle < Vehicle
