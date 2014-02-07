@@ -19,10 +19,6 @@ class Vehicle
 
   end
 
-  def self.register(automobile)
-    @@vehicles << automobile
-  end
-
   def self.wheels
     2
   end
@@ -30,7 +26,7 @@ end
 
 
 class Automobile < Vehicle
-  @@automobiles = []
+  @@auto = []
   attr_accessor :color, :make, :model, :year
   def self.wheels
     4
@@ -41,8 +37,13 @@ class Automobile < Vehicle
     @make = args[:make]
     @model = args[:model]
     @year = args[:year]
-    Vehicle.register(self)
     super()
+  end
+
+  def self.build(args)
+    auto = Automobile.build(args)
+    @@vehicles << auto
+    auto
   end
 
   def update(new_args)
@@ -52,22 +53,14 @@ class Automobile < Vehicle
     @year = new_args[:year] if new_args[:year]
   end
 
-  def self.build_car(args)
-    auto = Automobile.new(args)
-    @@vehicles << auto
-    auto
+  def all_autos
+    @@auto
   end
 
+  def self.count
+    @@auto.count
+  end
 end
 
 class Motorcycle < Vehicle
 end
-
-auto = Automobile.new(model: 'Mustang', color: 'Red', make: 'Ford', year: 2007)
-Automobile.new model: :mazda, color: :red, make: 'Civic', year: 2012
-Automobile.new model: :toyota, color: :red, make: 'Corolla', year: 2010
-Automobile.new model: :honda, color: :blue, make: 'Civic', year: 2013
-Automobile.new model: :mazda, color: :blue, make: 'Accord', year: 2003
-
-puts Vehicle.count
-puts Vehicle.search(color: "blue", model: "honda").inspect

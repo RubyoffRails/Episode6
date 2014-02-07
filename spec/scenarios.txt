@@ -1,0 +1,30 @@
+#Vehicle scenarios
+Vehicle.wheels
+8.times { Vehicle.new } and Vehicle.count == 8
+Vehicle.search(color: "blue", model: "honda").inspect
+
+
+#Automobilce scenarios
+Automobile.is_a?(Automobile)
+Automobile.wheels == 4
+auto = Automobile.new(model: 'Mustang', color: 'Red', make: 'Ford', year: 2007)
+auto.color == 'Red'
+auto.update(color: 'Blue', year: 2012)
+auto.color == 'Blue'
+auto.make = 'Ford'
+auto.year == 2012
+
+Automobile.new model: :mazda, color: :red, make: 'Civic', year: 2012
+Automobile.new model: :toyota, color: :red, make: 'Corolla', year: 2010
+Automobile.new model: :honda, color: :blue, make: 'Civic', year: 2013
+Automobile.new model: :mazda, color: :blue, make: 'Accord', year: 2003
+Vehicle.count == 5 #=> after all the above tests have run
+
+#Motorcycle
+Motorcycle.wheels
+4.times { Motorcycle.new } and Vehicle.count == 4
+Motorcycle.is_a?(Motorcycle)
+
+
+
+
