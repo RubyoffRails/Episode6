@@ -20,6 +20,10 @@ Automobile.new model: :honda, color: :blue, make: 'Civic', year: 2013
 Automobile.new model: :mazda, color: :blue, make: 'Accord', year: 2003
 Vehicle.count == 5 #=> after all the above tests have run
 
+Automobile.count #=> 0
+Automobile.build(model: 'Mustang', color: 'Red', make: 'Ford', year: 2007)
+Automobile.count #=> 1
+
 #Motorcycle
 Motorcycle.wheels
 4.times { Motorcycle.new } and Vehicle.count == 4

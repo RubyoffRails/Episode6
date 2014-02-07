@@ -41,8 +41,9 @@ class Automobile < Vehicle
   end
 
   def self.build(args)
-    auto = Automobile.build(args)
+    auto = Automobile.new(args)
     @@vehicles << auto
+    @@auto << auto
     auto
   end
 
@@ -53,7 +54,7 @@ class Automobile < Vehicle
     @year = new_args[:year] if new_args[:year]
   end
 
-  def all_autos
+  def self.all_autos
     @@auto
   end
 
