@@ -16,7 +16,10 @@ class Vehicle
       results.select!{|vehicle| vehicle.send(key) == value.to_sym}
     end
     results
+  end
 
+  def self.all_vehicles
+    @@vehicles
   end
 
   def self.wheels
