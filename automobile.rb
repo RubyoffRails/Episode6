@@ -3,17 +3,12 @@ class Auto
   def self.wheels
     4
   end
-  def initialize(params)
-    @color = params[:color]
-    @make  = params[:make]
-    @model = params[:model]
-    @year  = params[:year]
+  def initialize(opts = {})
+    opts.each { |k,v| instance_variable_set("@#{k}", v) }
   end
-  def update(params)
-    @color = params[:color]
-    @make  = params[:make]
-    @model = params[:model]
-    @year  = params[:year]
+
+  def update(opts = {})
+    opts.each { |k,v| instance_variable_set("@#{k}", v) }
   end
 end
 puts Auto.wheels
