@@ -1,6 +1,8 @@
 class Auto
   attr_accessor :color, :make, :model, :year
-
+  def self.wheels
+    4
+  end
   def initialize(params)
     @color = params[:color]
     @make  = params[:make]
@@ -14,8 +16,4 @@ class Auto
     @year  = params[:year]
   end
 end
-
-auto = Auto.new(make: "honda", year: 2014)
-
-auto.update(make: "toyota")
-puts auto.year
+puts Auto.wheels
