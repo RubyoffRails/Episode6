@@ -4,11 +4,17 @@ class Auto
     4
   end
   def initialize(opts = {})
-    opts.each { |k,v| instance_variable_set("@#{k}", v) }
+    @color = opts[:color]
+    @make = opts[:make]
+    @model = opts[:model]
+    @year = opts[:year]
   end
 
-  def update(opts = {})
-    opts.each { |k,v| instance_variable_set("@#{k}", v) }
+  def update(opts)
+    self.color = opts.fetch(:color) { color }
+    self.make = opts.fetch(:make) { make }
+    self.model = opts.fetch(:model) { model }
+    self.year = opts.fetch(:year) { year }
   end
 end
 puts Auto.wheels
